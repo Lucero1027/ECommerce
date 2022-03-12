@@ -65,6 +65,7 @@ router.put('/:id', (req, res) => {
         }
       }
     )
+    
     const updatedCategory = await Category.findByPk(req.params.id);
     res.status(200).json(updatedCategory);
   } catch (error) {
